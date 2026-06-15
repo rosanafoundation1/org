@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة روزانا للتدريب والتأهيل - الملف التعريفي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark-green: #143024;
+            --card-green: #1c4232;
+            --gold-accent: #e5b842;
+            --white: #ffffff;
+            --text-light: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
+
+        body { background-color: var(--bg-dark-green); color: var(--white); line-height: 1.6; font-size: 15px; }
+
+        header { background-color: rgba(20, 48, 36, 0.98); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(229, 184, 66, 0.15); backdrop-filter: blur(5px); }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; }
+        .brand-area { text-decoration: none; display: flex; flex-direction: column; line-height: 1.2; }
+        .brand-area .ar { font-size: 20px; font-weight: 900; color: var(--gold-accent); }
+        .brand-area .sub { font-size: 12px; color: var(--text-light); }
+
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li a { color: var(--text-light); text-decoration: none; font-weight: 500; font-size: 14px; }
+        nav ul li a:hover { color: var(--gold-accent); }
+
+        .hero { padding: 100px 20px 40px 20px; text-align: center; background: linear-gradient(180deg, var(--bg-dark-green) 0%, var(--card-green) 100%); }
+        .hero h1 { font-size: 32px; font-weight: 900; margin-bottom: 8px; }
+        .hero h1 span { color: var(--gold-accent); }
+        .hero h2 { font-size: 17px; color: var(--text-muted); margin-bottom: 15px; }
+
+        section { padding: 35px 20px; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 24px; font-weight: 700; margin-bottom: 25px; color: var(--gold-accent); }
+        
+        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .about-card { background-color: var(--card-green); padding: 20px; border-right: 3px solid var(--gold-accent); border-radius: 4px; }
+        .about-card h3 { font-size: 17px; margin-bottom: 8px; }
+        .about-card p { color: var(--text-light); font-size: 14px; }
+
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 15px; }
+        .program-card { background-color: rgba(28, 66, 50, 0.6); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; }
+        .program-header { background-color: rgba(229, 184, 66, 0.1); padding: 12px 15px; font-weight: 700; color: var(--gold-accent); border-bottom: 1px solid rgba(229, 184, 66, 0.15); }
+        .program-body { padding: 15px; }
+        .program-features { list-style: none; }
+        .program-features > li { margin-bottom: 8px; font-size: 14px; }
+        .program-features > li::before { content: "• "; color: var(--gold-accent); font-weight: bold; }
+        .sub-list { margin-top: 4px; margin-right: 15px; font-size: 13px; list-style: none; color: var(--text-light); }
+
+        .methodology-container { background-color: var(--card-green); padding: 20px; border-radius: 6px; }
+        .methodology-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .step { text-align: center; padding: 15px; background: rgba(20, 48, 36, 0.4); border-radius: 4px; }
+        .step-num { font-size: 24px; font-weight: 900; color: var(--gold-accent); }
+
+        /* قسم الدعوة للتواصل الجديد */
+        .cta-section { padding: 50px 20px; text-align: center; background: rgba(229, 184, 66, 0.05); border-top: 2px solid var(--gold-accent); margin-top: 40px; }
+        .cta-title { font-size: 28px; color: var(--gold-accent); margin-bottom: 20px; }
+        .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+        .cta-btn { display: flex; align-items: center; gap: 10px; padding: 12px 25px; background-color: var(--gold-accent); color: var(--bg-dark-green); text-decoration: none; border-radius: 50px; font-weight: 700; transition: 0.3s; }
+        .cta-btn:hover { transform: scale(1.05); background-color: var(--white); }
+
+        footer { background-color: #0d1f17; padding: 30px 20px; border-top: 2px solid var(--gold-accent); text-align: center; }
+        .contact-info { margin-bottom: 20px; }
+        .contact-info p { font-size: 14px; color: var(--text-light); margin: 5px 0; }
+        .copyright { margin-top: 20px; font-size: 12px; opacity: 0.5; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand-area">
+                <span class="ar">مؤسسة روزانا</span>
+                <span class="sub">للتدريب والتأهيل</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#programs">البرامج</a></li>
+                    <li><a href="#method">منهجيتنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>مؤسسة <span>روزانا</span> للتدريب والتأهيل</h1>
+        <h2>تطوير مهارات • تمكين مجتمعي • استدامة اقتصادية</h2>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">من نحن</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>نبذة عنا</h3>
+                <p>مؤسسة مشهرة بقرار رقم 1187 لعام 2026. نعمل عبر حزمة برامج تخصصية متكاملة لرفع الكفاءات المهنية، الأكاديمية، والتقنية وربطها بسوق العمل.</p>
+            </div>
+            <div class="about-card">
+                <h3>رؤيتنا ورسالتنا</h3>
+                <p>بناء مجتمعات كفوءة قادرة على الاعتماد الذاتي من خلال تقديم منظومات تدريبية تفاعلية، مع توفير فرص تأهيلية مرنة لجميع الفئات لضمان أثر مستدام.</p>
+            </div>
+            <div class="about-card">
+                <h3>أهدافنا</h3>
+                <p>سد الفجوات المهارية لدى الشباب، دعم الابتكار وريادة الأعمال الرقمية، وتمكين معيلات الأسر اقتصادياً للمساهمة في الاستقرار المجتمعي.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs">
+        <h2 class="section-title">البرامج التأهيلية</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-header">التعليم والتمكين</div>
+                <div class="program-body">
+                    <ul class="program-features">
+                        <li>البحوث والدراسات وبناء القدرات:
+                            <ul class="sub-list">
+                                <li>تطوير المهارات الحياتية وبناء القدرات</li>
+                                <li>تقديم الاستشارات والبحوث الميدانية</li>
+                                <li>برامج التعليم المهني</li>
+                            </ul>
+                        </li>
+                        <li>التعليم الأساسي والثانوي والجامعي</li>
+                        <li>تعليم الكبار والفئات الخاصة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-header">الصحة العامة والرعاية</div>
+                <div class="program-body">
+                    <ul class="program-features">
+                        <li>المشافي وإعادة التأهيل الطبي</li>
+                        <li>الرعاية الصحية الأولية والصحة الإنجابية</li>
+                        <li>الصحة العقلية والنفسية:
+                            <ul class="sub-list">
+                                <li>برامج الوقاية والوعي النفسي</li>
+                                <li>خدمات دعم حالات الصدمات</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-header">التنمية والإسكان</div>
+                <div class="program-body">
+                    <ul class="program-features">
+                        <li>التوظيف والتدريب المهني</li>
+                        <li>تمكين النساء المعيلات للأسر</li>
+                        <li>التمكين الاقتصادي والمشاريع الصغيرة</li>
+                        <li>التنمية الريفية والإحياء الحضري</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="program-header">التقانة المعلوماتية والتنمية الرقمية</div>
+                <div class="program-body">
+                    <ul class="program-features">
+                        <li>تعزيز الوصول الرقمي والبنية التحتية</li>
+                        <li>بناء القدرات والتدريب التقني</li>
+                        <li>الابتكار الرقمي والحاضنات التكنولوجية</li>
+                        <li>الحوكمة الرقمية والشفافية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="method">
+        <h2 class="section-title">منهجية التدريب</h2>
+        <div class="methodology-container">
+            <div class="methodology-steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <h4>التقييم الفعلي</h4>
+                    <p>تحديد الفجوات المعرفية والاحتياج الحقيقي.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <h4>المحاكاة التطبيقية</h4>
+                    <p>مشاريع عملية تحاكي المهام الواقعية.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <h4>التمكين المستدام</h4>
+                    <p>الربط بسوق العمل وحاضنات المشاريع.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-title">تواصلوا معنا لنبدأ رحلة التميز</h2>
+        <p style="margin-bottom: 30px;">يسعدنا انضمامكم لمجتمع مؤسسة روزانا. تابعوا أحدث برامجنا وتواصلوا معنا مباشرة عبر القنوات التالية:</p>
+        
+        <div class="cta-buttons">
+            <a href="https://wa.me/qr/VBOEK3QHEAKGE1" class="cta-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> راسلنا عبر واتساب
+            </a>
+            <a href="https://www.facebook.com/share/1C6UnTmaTj/" class="cta-btn" target="_blank">
+                <i class="fab fa-facebook-f"></i> تابع صفحتنا على فيسبوك
+            </a>
+            <a href="https://www.instagram.com/rosanafoundation1" class="cta-btn" target="_blank">
+                <i class="fab fa-instagram"></i> تابعنا على إنستغرام
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p>📧 foundationrosana@gmail.com</p>
+            <p>📱 رقم الاستعلامات: 0987017621</p>
+            <p>📱 المدير التنفيذي (أ. كارلوس طحان): 0987017620</p>
+            <p>📍 العنوان: حمص - الساعة الجديدة - بعد مبنى البريد بحارتين - دخلة مشفى دار السلام</p>
+        </div>
+        <div class="copyright">جميع الحقوق محفوظة © مؤسسة روزانا للتدريب والتأهيل 2026</div>
+    </footer>
+
+</body>
+</html>
